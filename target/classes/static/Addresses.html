@@ -1,0 +1,38 @@
+<!Doctype html>
+<html>
+<head>
+<script src="scripts/angular.js"></script>
+<script src="scripts/address.js"></script>
+<link href="css/style.css" rel="stylesheet"/>
+<title>Addresses</title>
+</head>
+<body ng-app="addressModule">
+	<div ng-controller="addressController">
+		<table>
+			<thead>
+				<th>Address ID</th>
+				<th>Zip code</th>
+				<th>Settlement</th>
+				<th>Publicplace</th>
+				<th>Publicplace type</th>
+				<th>Housenumber</th>
+				<th>Address otherfield</th>
+				<th>Formatted address</th>
+			</thead>
+			<tbody>
+				<tr ng-repeat="address in addresss">
+				<td>{{address.id}}</td>
+				<td>{{address.zipCode}}</td>
+				<td>{{address.settlement}}</td>
+				<td>{{address.publicPlace}}</td>
+				<td>{{address.publicPlaceType}}</td>
+				<td>{{address.houseNumber}}</td>
+				<td>{{address.addressOtherField}}</td>
+				<td>{{formattedAddress(address)}}</td>
+				<td><input type="button" value="-"/></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</body>
+</html>

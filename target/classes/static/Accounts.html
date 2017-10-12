@@ -1,0 +1,36 @@
+<!Doctype html>
+<html>
+	<head>
+		<script src="scripts/angular.js"></script>
+		<script src="scripts/account.js"></script>
+		<script src="scripts/bank.js"></script>
+		<script src="scripts/customer.js"></script>
+		<script src="scripts/submit.js"></script>
+		<script src="scripts/address.js"></script>
+		<script src="scripts/app.js"></script>
+		<link href="css/style.css" rel="stylesheet"/>
+		<title>Accounts</title>
+	</head>
+	<body ng-app="bankingApp">
+		<div ng-controller="accountController">
+			<table>
+			<thead>
+				<th>Account number</th>
+				<th>Bank Name</th>
+				<th>Balance</th>
+				<th>Credit size</th>
+			</thead>
+			<tbody>
+				<tr ng-repeat="account in accounts">
+				<td><input type="text" name="accountNumber" value="{{account.accountNumber}}"/></td>
+<!-- 				<td ng-controller="bankController"><input type="text" name="bankName" value="{{bankName(account.bankId)}}"/></td> -->
+				<td><input type="text" name="bankId" value="{{account.bankId}}"/></td>
+				<td><input type="text" name="balance" value="{{account.balance}}"/></td>
+				<td><input type="text" name="credit" value="{{account.credit}}"/></td>
+				</tr>
+			</tbody>
+		</table>
+		
+		</div>
+	</body>
+</html>
